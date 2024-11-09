@@ -127,3 +127,21 @@ h1{
     }
 
 }
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 28px;
+    }
+    .container .todo_app .row button {
+    font-family: "Pacifico", cursive;
+    font-size: 15px;
+    border: none;
+    outline: one;
+    padding: 16px 50px;
+    background-color: #f1904e;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+    margin-left: -100px;
+}
+}
