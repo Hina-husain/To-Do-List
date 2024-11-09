@@ -163,7 +163,7 @@ h1{
         right: 87%;
     }
 }
-@media screen and (max-width: 359px)
+@media screen and (max-width: 360px)
     .container .todo_app ul li::before {
         right: 86%;
     }
