@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Playwrite+BE+VLG:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    color: #f1904e;
+    font-weight: 900;
+    font-size: 50px;
+}    
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/backimage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .todo_app{
+    width: 100%;
+    max-width: 650px;
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    padding: 40px 45px 70px;
+    border-radius: 20px;
+    box-shadow: 4px 0px 8px rgba(255, 255, 255, 0.2),  /* Right shadow with light white */
+    0px 4px 8px rgba(255, 255, 255, 0.2);  /* Bottom shadow with light white */
+}
+.container .todo_app h1{
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      margin-bottom: 20px;
+}
+.container .todo_app h1 img{
+    margin-left: 10px;
+}
+.container .todo_app .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.container .todo_app .row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-size: 18px;
+}
+.container .todo_app .row button{
+    font-family: "Pacifico", cursive;
+    font-size: 15px;
+    border: none;
+    outline: one;
+    padding: 16px 50px;
+    background-color: #f1904e;
+    color: white;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.container .todo_app ul li{
+    list-style: none;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    margin-bottom: 20px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.container .todo_app ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    /* border-radius: 50%; */
+    background-image: url(../images/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    right: 93%;
+}
+.container .todo_app ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.container .todo_app ul li.checked::before{
+   background-image: url(../images/checked.png);
+}
+.container .todo_app ul li span{
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 40px;
+    font-size: 22px;
+    border-radius: 40px;
+    color: #000000;
+    line-height: 40px;
+    text-align: center;
+}
+.container .todo_app ul li span:hover{
+    background-color: #f1904e;
+}
+
+@media screen and (max-width: 480px){
+    h1{
+        font-size: 40px;
+    }
+    .container .todo_app ul li::before{
+        right: 90%;
+    }
+}
+@media screen and (max-width: 424px){
+    h1{
+        font-size: 32px;
+    }
+
+}
